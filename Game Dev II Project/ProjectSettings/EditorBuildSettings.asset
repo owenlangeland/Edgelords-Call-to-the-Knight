@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1eac060a47187be42a9ec25c206b2a30
+  - enabled: 1
+    path: Assets/Scenes/DeathScreen.unity
+    guid: 6bef1c5c83b9b3745b21ac6421c75604
+  - enabled: 1
+    path: Assets/Scenes/StartingRoom.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Room2.unity
+    guid: 2f6effd3b230cb64d8dd9b1cb59a29ea
+  - enabled: 1
+    path: Assets/Scenes/Room3.unity
+    guid: bb232b680d9bf474a81aea3a329cefda
+  - enabled: 1
+    path: Assets/Scenes/Room4.unity
+    guid: 09bc8228983696c4e8cf787551026634
+  - enabled: 1
+    path: Assets/Scenes/Room5.unity
+    guid: 4eb9022868ea4b245b3f15d02bbb2622
+  - enabled: 1
+    path: Assets/Scenes/Room6.unity
+    guid: 4534d831b7cf8a3419c23ca2fe222483
+  - enabled: 1
+    path: Assets/Scenes/Room7.unity
+    guid: 685b775d4393e9441b78f390d119eaaa
+  - enabled: 1
+    path: Assets/Scenes/Room8.unity
+    guid: ef43371a74e0b814283267f6b3e40710
+  - enabled: 1
+    path: Assets/Scenes/Room9.unity
+    guid: 5d38c687582dfb442833e09c13743aa5
+  - enabled: 1
+    path: Assets/Scenes/Room10.unity
+    guid: 8120073417834954f89ff282f431152d
+  - enabled: 1
+    path: Assets/Scenes/Room11.unity
+    guid: 213c1f5fff1083a438f6f421becd9c91
+  m_configObjects: {}
