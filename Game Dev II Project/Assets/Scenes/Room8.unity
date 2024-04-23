@@ -42270,7 +42270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7043793339088958688, guid: b1f035456f3b63b4a9eac258d53f5684, type: 3}
       propertyPath: playerPosition.y
-      value: 15
+      value: 27.6
       objectReference: {fileID: 0}
     - target: {fileID: 7043793339088958689, guid: b1f035456f3b63b4a9eac258d53f5684, type: 3}
       propertyPath: m_Size.x
