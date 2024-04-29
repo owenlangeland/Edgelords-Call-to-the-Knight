@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2109036369117533646}
   - component: {fileID: 8920763557052781270}
   - component: {fileID: 7274812754672711133}
+  - component: {fileID: 4318000291140872484}
   m_Layer: 8
   m_Name: Spider
   m_TagString: Enemy
@@ -178,3 +179,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 50
   currentHealth: 0
+--- !u!114 &4318000291140872484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8864719591651396988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060ab19d6935029438e59b10b2989a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  flashMaterial: {fileID: 2100000, guid: d839962ebc3350f43be7d6a1d3034c7e, type: 2}
+  duration: 0.125

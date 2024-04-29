@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour
 {
+    private Animator animator;
     private EnemyController enemyController;
     private BatBehaviour batBehaviour;
     private Rigidbody2D rb; // Corrected typo: Rigidbody2D instead of RigidBody2D
@@ -13,6 +14,7 @@ public class EnemyHealth : MonoBehaviour
     private void Start()
     {
         currentHealth = maxHealth;
+        animator = GetComponent<Animator>();
         enemyController = GetComponent<EnemyController>();
         batBehaviour = GetComponent<BatBehaviour>();
         rb = GetComponent<Rigidbody2D>(); // Corrected typo: Rigidbody2D instead of RigidBody2D
@@ -20,6 +22,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        GetComponent<DamageFlash>().Flash();
         currentHealth -= damage;
 
         if (currentHealth <= 0)
@@ -32,12 +35,25 @@ public class EnemyHealth : MonoBehaviour
     {
         Debug.Log("Enemy Died");
 
+        animator.SetBool("Exit", true);
+
         gameObject.layer = LayerMask.NameToLayer("DeadEnemy");
         gameObject.tag = "DeadEnemy";
+        
+        rb.gravityScale = 1f;
 
         enemyController.StopMovement();
-        batBehaviour.enabled = false;
+        if (batBehaviour != null)
+            batBehaviour.enabled = false;
+
+        StartCoroutine(DeleteEnemy()); 
         
-        rb.velocity = Vector2.zero; // Stop the Rigidbody's velocity
+        rb.velocity = Vector2.zero; 
+    }
+
+    private IEnumerator DeleteEnemy()
+    {
+        yield return new WaitForSeconds(2f);
+        Destroy(gameObject); // Changed 'Delete' to 'Destroy' to remove the GameObject from the scene
     }
 }
