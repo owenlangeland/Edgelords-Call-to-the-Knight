@@ -40,9 +40,12 @@ public class EnemyHealth : MonoBehaviour
         gameObject.layer = LayerMask.NameToLayer("DeadEnemy");
         gameObject.tag = "DeadEnemy";
         
-        rb.gravityScale = 1f;
 
-        enemyController.StopMovement();
+        if (enemyController != null) {
+            enemyController.StopMovement();
+            rb.gravityScale = 1f;
+        }
+
         if (batBehaviour != null)
             batBehaviour.enabled = false;
 
