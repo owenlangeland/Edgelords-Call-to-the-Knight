@@ -6,6 +6,7 @@ public class EnemyHealth : MonoBehaviour
     private Animator animator;
     private EnemyController enemyController;
     private BatBehaviour batBehaviour;
+    private BossScript bossScript;
     private Rigidbody2D rb; // Corrected typo: Rigidbody2D instead of RigidBody2D
 
     public int maxHealth = 50;
@@ -17,6 +18,7 @@ public class EnemyHealth : MonoBehaviour
         animator = GetComponent<Animator>();
         enemyController = GetComponent<EnemyController>();
         batBehaviour = GetComponent<BatBehaviour>();
+        bossScript = GetComponent<BossScript>();
         rb = GetComponent<Rigidbody2D>(); // Corrected typo: Rigidbody2D instead of RigidBody2D
     }
 
@@ -48,6 +50,9 @@ public class EnemyHealth : MonoBehaviour
 
         if (batBehaviour != null)
             batBehaviour.enabled = false;
+
+        if (bossScript != null)
+            bossScript.enabled = false;
 
         StartCoroutine(DeleteEnemy()); 
         

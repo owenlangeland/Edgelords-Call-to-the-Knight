@@ -239,7 +239,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   forceAmount: 3000
-  attackCooldown: 2
+  attackCooldown: 4
 --- !u!50 &356330935
 Rigidbody2D:
   serializedVersion: 4

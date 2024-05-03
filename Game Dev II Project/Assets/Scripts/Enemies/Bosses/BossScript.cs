@@ -76,14 +76,14 @@ public class BossScript : MonoBehaviour
             if(rush == false)
             {
                 rb.AddForce(Vector2.left * forceAmount, ForceMode2D.Impulse);
-                flip();
                 rush = true;
+                flip();
             }
             else if(rush)
             {
                 rb.AddForce(Vector2.right * forceAmount, ForceMode2D.Impulse);
-                flip();
                 rush = false;
+                flip();
             }
             
         }
