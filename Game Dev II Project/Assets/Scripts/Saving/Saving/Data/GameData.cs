@@ -12,7 +12,6 @@ public class GameData
     public bool doubleJumpAcquired;
 
     public int numberOfJumps;
-
     public int currentHealth;
 
     public GameData()

@@ -10,7 +10,7 @@ public class FileDataHandler
         private string dataFileName = "";
 
         private bool useEncryption = false;
-	    private readonly string encryptionCodeWord = "NoMAN";
+        private readonly string encryptionCodeWord = "NoMAN";
 
 
         public FileDataHandler(string dataDirPath, string dataFileName, bool useEncryption)

@@ -21,27 +21,27 @@ public class DataPersistenceManager : MonoBehaviour
         if(instance != null)
         {
             Debug.Log("Found more than one Data Persistence Manager in the scene. Destroying the Newest one.");
-		Destroy(this.gameObject);
-		return;
+        Destroy(this.gameObject);
+        return;
         }
         instance = this;
-	   DontDestroyOnLoad(this.gameObject);
-	
-	this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
+       DontDestroyOnLoad(this.gameObject);
+    
+    this.dataHandler = new FileDataHandler(Application.persistentDataPath, fileName, useEncryption);
 
     }
 
-	private void OnEnable()
-	{
-		SceneManager.sceneLoaded += OnSceneLoaded;
-		SceneManager.sceneUnloaded += OnSceneUnloaded;
-	}
-	private void OnDisable()
-	{
+    private void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+        SceneManager.sceneUnloaded += OnSceneUnloaded;
+    }
+    private void OnDisable()
+    {
         SceneManager.sceneLoaded -= OnSceneLoaded;
-		SceneManager.sceneUnloaded -= OnSceneUnloaded;
+        SceneManager.sceneUnloaded -= OnSceneUnloaded;
 
-	}
+    }
         public void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log("OnSceneLoaded Called");
@@ -64,10 +64,10 @@ public class DataPersistenceManager : MonoBehaviour
     {
         this.gameData = dataHandler.Load();
 
-	  if (this.gameData == null && initializeDataIfNull)
-		{
-		   NewGame();
-		}
+      if (this.gameData == null && initializeDataIfNull)
+        {
+           NewGame();
+        }
 
         if(this.gameData == null)
         {
