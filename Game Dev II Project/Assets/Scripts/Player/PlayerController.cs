@@ -45,6 +45,19 @@ public class PlayerController : MonoBehaviour
         transform.position = startingPosition.initialValue;
     }
 
+    public void loadData(GameData data)
+    {
+        this.doubleJumpAcquired = data.doubleJumpAcquired;
+        this.numberOfJumps = data.numberOfJumps;
+    }
+
+    public void SaveData(ref GameData data)
+    {
+        data.doubleJumpAcquired = this.doubleJumpAcquired;
+        data.numberOfJumps = this.numberOfJumps;
+    }
+
+
     private void Update()
     {
         // Smooth input handling

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour, IDataPersistence
 {
     public int maxHealth = 100;
     public int currentHealth;
@@ -17,6 +17,15 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+    }
+
+    public void loadData(GameData data)
+    {
+        this.currentHealth = data.currentHealth;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.currentHealth = this.currentHealth;
     }
 
     // Update is called once per frame
