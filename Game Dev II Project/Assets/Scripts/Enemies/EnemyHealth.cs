@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
@@ -54,7 +55,14 @@ public class EnemyHealth : MonoBehaviour
         if (bossScript != null)
             bossScript.enabled = false;
 
-        StartCoroutine(DeleteEnemy()); 
+        if (bossScript != null && currentHealth <= 0)
+        {
+            Debug.Log("Win");
+            StartCoroutine("WinScreen");
+        }
+
+        if (bossScript == null)
+            StartCoroutine(DeleteEnemy()); 
         
         rb.velocity = Vector2.zero; 
     }
@@ -63,5 +71,12 @@ public class EnemyHealth : MonoBehaviour
     {
         yield return new WaitForSeconds(2f);
         Destroy(gameObject); // Changed 'Delete' to 'Destroy' to remove the GameObject from the scene
+    }
+
+    private IEnumerator WinScreen()
+    {
+        Debug.Log("Win Screen Activated");
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene("WinScreen");
     }
 }

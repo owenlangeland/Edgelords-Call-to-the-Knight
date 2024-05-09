@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 356330933}
   - component: {fileID: 356330941}
   - component: {fileID: 356330940}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Boss
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -239,7 +239,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   forceAmount: 3000
-  attackCooldown: 4
+  attackCooldown: 3
 --- !u!50 &356330935
 Rigidbody2D:
   serializedVersion: 4
@@ -25295,7 +25295,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1994728187}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: AttackPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}

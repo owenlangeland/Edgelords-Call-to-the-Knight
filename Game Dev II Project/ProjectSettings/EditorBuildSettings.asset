@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 1eac060a47187be42a9ec25c206b2a30
   - enabled: 1
-    path: Assets/Scenes/DeathScreen.unity
+    path: Assets/Scenes/WinScreen.unity
     guid: 6bef1c5c83b9b3745b21ac6421c75604
   - enabled: 1
     path: Assets/Scenes/StartingRoom.unity
@@ -50,4 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Room13.unity
     guid: 37050ccb19622bb45a64ae667c70d09b
+  - enabled: 1
+    path: Assets/Scenes/BossRoom1.unity
+    guid: 3b3228a630c798a43ba6dbb4c27b1bbe
   m_configObjects: {}

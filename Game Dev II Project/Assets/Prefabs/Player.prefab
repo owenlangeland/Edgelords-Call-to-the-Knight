@@ -268,7 +268,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
 --- !u!114 &1871450989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,7 +286,7 @@ MonoBehaviour:
   attackPoint: {fileID: 3791802620651137367}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 1280
 --- !u!114 &1358547552330215736
 MonoBehaviour:
   m_ObjectHideFlags: 0
